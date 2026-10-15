@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f7f3" />
+    <meta
+      name="description"
+      content="Preencha e imprima o controle de frequência escolar para o passe RioPretrans."
+    />
+    <title>Controle de frequência escolar: RioPretrans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="inner-pages.css" />
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumbs">
+          <a href="index.html">Início</a><span>/</span
+          ><a href="estudante.html">Área do estudante</a><span>/</span
+          ><b>Controle de frequência</b>
+        </div>
+        <div class="page-hero-content">
+          <div class="eyebrow"><span></span> DOCUMENTO ESCOLAR</div>
+          <h1>Controle de<br /><em>frequência.</em></h1>
+          <p>
+            Preencha os dados para imprimir o formulário e levar à instituição
+            de ensino para assinatura e carimbo.
+          </p>
+        </div>
+      </section>
+      <section class="page-body">
+        <form class="content-card print-form" id="frequency-form">
+          <h2>Dados do estabelecimento de ensino</h2>
+          <div class="field-grid">
+            <label>Nome da instituição<input name="school" required /></label
+            ><label>CEP<input name="school-cep" inputmode="numeric" /></label
+            ><label class="field-wide"
+              >Rua / avenida<input name="school-street" required /></label
+            ><label>Número<input name="school-number" /></label
+            ><label>Bairro<input name="school-neighborhood" /></label>
+          </div>
+          <h2>Dados do estudante</h2>
+          <div class="field-grid">
+            <label>Nome completo<input name="student" required /></label
+            ><label
+              >Sexo<select name="sex">
+                <option value="">Selecione</option>
+                <option>Feminino</option>
+                <option>Masculino</option>
+                <option>Prefiro não informar</option>
+              </select></label
+            ><label>Data de nascimento<input name="birth" type="date" /></label
+            ><label>CEP<input name="student-cep" inputmode="numeric" /></label
+            ><label class="field-wide"
+              >Rua / avenida<input name="student-street" /></label
+            ><label>Número<input name="student-number" /></label
+            ><label>Bairro<input name="student-neighborhood" /></label
+            ><label>Curso<input name="course" required /></label
+            ><label
+              >Período<select name="period">
+                <option value="">Selecione</option>
+                <option>Matutino</option>
+                <option>Vespertino</option>
+                <option>Noturno</option>
+                <option>Integral</option>
+              </select></label
+            ><label>Carga horária semanal<input name="hours" /></label>
+          </div>
+          <div class="form-note">
+            <b>Atenção:</b> os campos obrigatórios devem ser preenchidos. A
+            instituição de ensino deve conferir, assinar e carimbar as
+            informações.
+          </div>
+          <div class="page-actions screen-only">
+            <button class="button button-dark" type="button" id="print-form">
+              Imprimir formulário <span>↗</span></button
+            ><a class="button button-outline" href="estudante.html"
+              >Voltar para estudante <span>→</span></a
+            >
+          </div>
+        </form>
+      </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="site.js"></script>
+    <script src="app.js"></script>
+    <script>
+      document.querySelector("#print-form").addEventListener("click", () => {
+        const form = document.querySelector("#frequency-form");
+        if (!form.reportValidity()) return;
+        window.print();
+      });
+    </script>
+  </body>
+</html>

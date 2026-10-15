@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Consulte horários, plataforma e itinerário das linhas urbanas de São José do Rio Preto."
+    />
+    <title>Linhas e horários: RioPretrans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="inner-pages.css" />
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <section class="page-hero page-hero-centered">
+        <div class="breadcrumbs">
+          <a href="index.html">Início</a><span>/</span><b>Linhas e horários</b>
+        </div>
+        <div class="page-hero-content">
+          <div class="eyebrow"><span></span> HORÁRIOS E ITINERÁRIOS</div>
+          <h1>Seu caminho,<br /><em>no seu tempo.</em></h1>
+          <p>Consulte partidas, plataforma e percurso sem sair do site.</p>
+        </div>
+      </section>
+      <section class="page-body schedule-page">
+        <article class="content-card route-lookup-card">
+          <label for="official-line-select" class="field-label"
+            >ESCOLHA SUA LINHA</label
+          >
+          <select
+            id="official-line-select"
+            class="page-search official-line-select"
+          >
+            <option value="">Carregando linhas…</option>
+          </select>
+          <div class="page-actions">
+            <a class="button button-outline" href="linhas.html"
+              >Buscar por nome do bairro <span>→</span></a
+            >
+            <a
+              class="button button-outline"
+              href="https://linhasriopreto.riopretrans.com.br/mapa/"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir mapa de linhas <span>↗</span></a
+            >
+          </div>
+        </article>
+        <article
+          id="route-detail"
+          class="content-card route-detail-card"
+          aria-live="polite"
+        >
+          <p class="route-empty">
+            Selecione uma linha para consultar horários e itinerário.
+          </p>
+        </article>
+        <p class="route-facts-note">
+          <span>◷</span> Horários sujeitos a alterações. Confirme informações
+          com a RioPretrans.
+        </p>
+      </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="site.js"></script>
+    <script src="assets/official-lines.js"></script>
+    <script src="assets/official-schedules.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

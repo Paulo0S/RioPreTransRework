@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f7f3" />
+    <meta
+      name="description"
+      content="Consulte as linhas de ônibus de São José do Rio Preto e abra os horários e itinerários atualizados."
+    />
+    <title>Linhas e horários: RioPretrans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="inner-pages.css" />
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumbs">
+          <a href="index.html">Início</a><span>/</span><b>Linhas e horários</b>
+        </div>
+        <div class="page-hero-content">
+          <div class="eyebrow"><span></span> ESCOLHA SEU CAMINHO</div>
+          <h1>Rio Preto cabe<br />no seu <em>trajeto.</em></h1>
+          <p>
+            Pesquise pelo número ou destino. Ao abrir uma linha, você verá
+            horários, variantes de itinerário e plataforma.
+          </p>
+        </div>
+      </section>
+      <section class="page-body">
+        <div class="info-banner">
+          <span>✳</span>
+          <div>
+            <strong
+              >90 linhas disponíveis · dados coletados em 15/10/2026</strong
+            >
+            <p>
+              Os horários e percursos abrem no quadro oficial da linha, que é
+              atualizado pela operação.
+            </p>
+          </div>
+        </div>
+        <div class="page-toolbar">
+          <div>
+            <h2>Encontre sua linha</h2>
+            <p id="line-count">Carregando linhas</p>
+          </div>
+          <label class="sr-only" for="line-search">Buscar linha ou bairro</label
+          ><input
+            id="line-search"
+            class="page-search"
+            type="search"
+            placeholder="Ex.: 217, Shopping, São Felício"
+          />
+        </div>
+        <div class="line-grid" id="line-grid"></div>
+        <p class="line-empty" id="line-empty" hidden>
+          Nenhuma linha encontrada. Tente buscar por outro nome ou número.
+        </p>
+        <div class="page-actions">
+          <a
+            class="button button-dark"
+            href="https://linhasriopreto.riopretrans.com.br/mapa/"
+            target="_blank"
+            rel="noreferrer"
+            >Abrir mapa completo <span>↗</span></a
+          ><a class="button button-outline" href="integracao.html"
+            >Entender integração <span>→</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="site.js"></script>
+    <script src="assets/official-lines.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f7f3" />
+    <meta
+      name="description"
+      content="Encontre linhas, horários, recarga e informações do transporte coletivo de São José do Rio Preto."
+    />
+    <title>RioPretrans: A cidade vai com você</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <h1>A cidade vai<br />com <em>você.</em></h1>
+          <p>
+            Encontre sua linha e consulte os horários para planejar seu
+            deslocamento pela cidade.
+          </p>
+          <a class="button button-dark" href="linhas.html"
+            >Encontrar minha linha <span>→</span></a
+          >
+        </div>
+        <div
+          class="hero-art"
+          aria-label="Ônibus do transporte coletivo de São José do Rio Preto"
+        >
+          <div
+            class="hero-photo"
+            role="img"
+            aria-label="Ônibus municipais em uma garagem ao ar livre"
+          ></div>
+        </div>
+        <div class="hero-bottom">
+          <span>01: MOBILIDADE PARA TODOS</span
+          ><span class="scroll-cue">ROLE PARA DESCOBRIR <b>↓</b></span>
+        </div>
+      </section>
+
+      <section class="quick-search" id="linhas">
+        <div class="section-kicker">CONSULTA RÁPIDA <span>01 / 04</span></div>
+        <div class="search-panel">
+          <div class="search-copy">
+            <span class="search-symbol">⌕</span>
+            <div>
+              <h2>Para onde você vai?</h2>
+              <p>Encontre sua linha e confira o caminho.</p>
+            </div>
+          </div>
+          <form class="route-search" id="route-search">
+            <label class="sr-only" for="route-input"
+              >Busque por linha ou bairro</label
+            >
+            <span class="search-glass">⌕</span
+            ><input
+              id="route-input"
+              type="search"
+              placeholder="Ex.: 217, Solo Sagrado, Shopping..."
+              autocomplete="off"
+            />
+            <button class="button button-red" type="submit">
+              Buscar linhas <span>→</span>
+            </button>
+            <div
+              class="search-results"
+              id="search-results"
+              role="listbox"
+              aria-label="Linhas encontradas"
+            ></div>
+          </form>
+        </div>
+        <div class="search-shortcuts">
+          <span>MAIS PROCURADOS</span
+          ><button data-query="shopping">Shopping</button
+          ><button data-query="mirassolândia">Mirassolândia</button
+          ><button data-query="jardim">Jardim</button
+          ><button data-query="noturna">Linhas noturnas</button>
+        </div>
+      </section>
+
+      <section class="services section-wrap" id="servicos">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow"><span></span> TUDO EM UM SÓ LUGAR</div>
+            <h2>Serviços para<br />o seu dia a dia.</h2>
+          </div>
+          <p>
+            Acesse, em um só lugar, serviços para planejar viagens, gerenciar
+            seu cartão e consultar benefícios.
+          </p>
+        </div>
+        <div class="service-grid">
+          <a class="service-card card-red" href="linhas.html"
+            ><span class="card-tag">PLANEJE</span
+            ><span class="service-icon icon-route">↗</span>
+            <div>
+              <h3>Linhas e horários</h3>
+              <p>Veja itinerários, horários e encontre o melhor caminho.</p>
+            </div>
+            <span class="card-arrow">↗</span>
+            <div class="card-decoration deco-route">⌁</div></a
+          >
+          <a class="service-card card-yellow" href="recarga.html"
+            ><span class="card-tag">RECARREGUE</span
+            ><span class="service-icon icon-card">▰</span>
+            <div>
+              <h3>Pontos de recarga</h3>
+              <p>Localize os pontos de recarga disponíveis na cidade.</p>
+            </div>
+            <span class="card-arrow">↗</span>
+            <div class="card-decoration deco-card">✳</div></a
+          >
+          <a class="service-card card-blue" href="integracao.html"
+            ><span class="card-tag">CONECTE</span
+            ><span class="service-icon icon-transfer">⇄</span>
+            <div>
+              <h3>Tabela de integração</h3>
+              <p>Saiba como trocar de linha dentro do tempo de integração.</p>
+            </div>
+            <span class="card-arrow">↗</span>
+            <div class="card-decoration deco-transfer">⤴</div></a
+          >
+          <a
+            class="service-card card-green"
+            href="portal-info.html?page=venda-de-creditos"
+            ><span class="card-tag">VALE-TRANSPORTE</span
+            ><span class="service-icon icon-business">▤</span>
+            <div>
+              <h3>Para sua empresa</h3>
+              <p>Cadastre-se e compre créditos de vale-transporte online.</p>
+            </div>
+            <span class="card-arrow">↗</span>
+            <div class="card-decoration deco-business">⌂</div></a
+          >
+        </div>
+      </section>
+
+      <section class="news-strip section-wrap">
+        <div>
+          <div class="eyebrow"><span></span> INFORMATIVO</div>
+          <h2>Avisos sobre o transporte</h2>
+          <p>
+            Consulte comunicados e atualizações das linhas publicadas pela
+            RioPretrans.
+          </p>
+        </div>
+        <a class="button button-dark" href="informativo.html"
+          >Ver informativos <span>→</span></a
+        >
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+    <script src="site.js"></script>
+    <script src="assets/official-lines.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
