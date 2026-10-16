@@ -1,9 +1,5 @@
-const logo = `
-  <span class="brand-name" aria-label="RioPreTrans">
-    <span class="brand-red">RioPre</span><span class="brand-blue">Trans</span>
-    <small>SÃO JOSÉ DO RIO PRETO</small>
-  </span>
-`;
+const logo =
+  '<img class="brand-logo-image" src="assets/logo.png" alt="Consórcio RioPretrans" />';
 
 const header = `
   <div class="announcement">
